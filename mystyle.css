@@ -1,0 +1,230 @@
+.logo {
+	  margin: 7px 12px 4px 11px;
+    background-image: url(images/logo.png);
+    background-repeat: no-repeat;
+    width: 83px;
+    height: 10px;
+    background-size: 100%;
+    display: block;
+    pointer-events: none;
+    cursor: default;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Verdana";
+  font-size: 17px;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: yellow;}
+
+ul.topnav li a.active {background-color: yellow;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+
+/* Изменение цвета ссылок при наведении курсора */
+.topnav a:hover {
+  background-color: #ffff00;
+  color: black;
+}
+
+/* Добавить цвет для активной/текущей ссылки */
+.topnav a.active {
+  background-color: #ffff00;
+  color: black;
+}
+
+.log{
+	margin: 7px 12px 4px 11px;
+  background-image: url(images/login-icon.png);
+  background-repeat: no-repeat;
+  float: right;
+  width: 36px;
+  height: 36px;
+  background-size: 100%;
+  display: block;
+}
+
+.log:hover {
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: contain;
+  width: 7px;
+  height:7px;
+  filter: invert(100%);
+}
+
+.log:active {
+	background-image: url(images/login-icon-on.png);
+	background-repeat: no-repeat;
+	background-color: rgb(0, 0, 0);
+  background-size: contain;
+  width: 7px;
+  height:7px;
+}
+
+.block {
+	width: 100%;
+	height: 100%;
+	margin: 5%;
+	margin-top: 0;
+	background-color: black;
+}
+
+/* стили для элемента body */
+.body {
+	background-color: black;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	height: 100%;
+}
+
+.container1 {
+  background-color: #000;
+}
+
+.main-text {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+
+/* стили основного контейнера слайдера */
+.slider {
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* стили для обёртки, в которой заключены слайды */
+.slider__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* стили для контейнера слайдов */
+.slider__items {
+  display: flex;
+  transition: transform 0.1s ease;
+}
+
+/* стили для слайдов */
+.slider__item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* стили для кнопок "вперед" и "назад" */
+.slider__control {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+  height: 50px;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.slider__control:hover,
+.slider__control:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: 0.9;
+}
+
+.slider__control_prev {
+  left: 0;
+}
+
+.slider__control_next {
+  right: 0;
+}
+
+.slider__control::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.slider__control_prev::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.slider__control_next::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+/* стили для индикаторов */
+.slider__indicators {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0 15%;
+  list-style: none;
+}
+
+.slider__indicators li {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 4px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-clip: padding-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.slider__indicators li.active {
+  background-color: rgb(238, 255, 0);
+}
+
+.table {
+  margin: auto;
+  color: #fff;
+}
+
